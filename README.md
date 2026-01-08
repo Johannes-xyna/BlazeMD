@@ -18,7 +18,7 @@ Blaze MD is a high-performance simulation kit designed to maximize sampling spee
 The list below shows the avg. ns/day speed achieved with different GPU's. The test was done using the parameters shown below. Higher speeds can be achieved with less detailed force fields and water models. A four point water model (i.e. opc or tip4pew) reduces the speed by around 23% compared to three point water models (i.e. tip3p).
 
     GPU Name            |   HMR Enabled  |  HMR Disabled
-*   RTX 4060 Laptop GPU | **540 ns/day** | **270 ns/day**
+    RTX 4060 Laptop GPU | **540 ns/day** | **270 ns/day**
 
 Contact me if you attempt this on a GPU that isn't listed here.
 
