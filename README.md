@@ -20,6 +20,7 @@ The list below shows the avg. ns/day speed achieved with different GPU's. IMPORT
     GPU Name             |   HMR Enabled  |  HMR Disabled  |  Atoms in system  |  Protein
     RTX 4060 Laptop GPU  |   548 ns/day   |  274 ns/day    |  26559            |  Nanobody
     Air Apple M3 8-core  |   478 ns/day   |  215 ns/day    |  3863             |  Cyclotide
+    RTX 3060 Ti          |   561 ns/day   |                |  26559            |  Nanobody
 
 Contact me if you attempt this on a GPU that isn't listed here.
 
