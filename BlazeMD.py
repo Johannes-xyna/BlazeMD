@@ -135,7 +135,7 @@ def setup_and_minimize(modeller, forcefield, temperature, pressure, timestep, em
     # --- HMR LOGIC ---
     system_args = {
         'nonbondedMethod': PME,
-        'nonbondedCutoff': 1.0 * nanometer,
+        'nonbondedCutoff': 1.2 * nanometer,
         'constraints': HBonds,
     }
     
@@ -156,7 +156,7 @@ def setup_and_minimize(modeller, forcefield, temperature, pressure, timestep, em
             print("⛔ WARNING: HMR is OFF, but timestep is large (> 2.5fs). The simulation will likely CRASH.")
 
     # Create System using unpacked arguments
-    system = forcefield.createSystem(modeller.topology, **system_args)
+    system = forcefield.createSystem(modeller.topology, **system_args, useDispersionCorrection=True)
     
     # --- Add Barostat ---
     barostat = MonteCarloBarostat(pressure*bar, temperature*kelvin, 25)
