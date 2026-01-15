@@ -1,3 +1,6 @@
 # Virtual environments
 venv/
 .venv/
+production.nc
+solvated.pdb
+equilibrated.cif

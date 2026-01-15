@@ -15,10 +15,11 @@ Blaze MD is a high-performance simulation kit designed to maximize sampling spee
 *   **GPU Accelerated:** Auto-detects CUDA, OpenCL, or Metal to utilize maximum hardware performance.
 
 ## Performance on different GPUs
-The list below shows the avg. ns/day speed achieved with different GPU's. The test was done using the parameters shown below. Higher speeds can be achieved with less detailed force fields and water models. A four point water model (i.e. opc or tip4pew) reduces the speed by around 23% compared to three point water models (i.e. tip3p).
+The list below shows the avg. ns/day speed achieved with different GPU's. IMPORTANT: The test uses the parameters shown below (*#Configuration*). Higher speeds can be achieved with less detailed force fields and water models. A four point water model (i.e. opc or tip4pew) reduces the speed by around 23% compared to three point water models (i.e. tip3p).
 
-    GPU Name            |   HMR Enabled  |  HMR Disabled  |  Atoms in system
-    RTX 4060 Laptop GPU |   548 ns/day   |  274 ns/day    |  26559
+    GPU Name             |   HMR Enabled  |  HMR Disabled  |  Atoms in system  |  Protein
+    RTX 4060 Laptop GPU  |   548 ns/day   |  274 ns/day    |  26559            |  Nanobody
+    Air Apple M3 8-core  |   478 ns/day   |  215 ns/day    |  3863             |  Cyclotide
 
 Contact me if you attempt this on a GPU that isn't listed here.
 
@@ -76,7 +77,7 @@ To change simulation parameters (length, temperature, forcefields), open `BlazeM
 
 ```python
 # Simulation config
-TARGET_MD_LENGTH =      1000            # Simulation length in ns
+TARGET_MD_LENGTH =      1               # Simulation length in ns
 USE_HMR =               True            # Use Hydrogen Mass Repartitioning for longer timesteps
 
 # File config

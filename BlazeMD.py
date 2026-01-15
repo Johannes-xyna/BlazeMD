@@ -197,7 +197,7 @@ def setup_and_minimize(modeller, forcefield, temperature, pressure, timestep, em
     barostat.setFrequency(25) # On for NPT
     simulation.context.reinitialize(preserveState=True)
     
-    print(f"⚖️ Phase 2: NPT Pressurization ({npt_steps * timestep / 1000:.2f} ns)...")
+    print(f"⚖️  Phase 2: NPT Pressurization ({npt_steps * timestep / 1000:.2f} ns)...")
     simulation.step(npt_steps)
 
     # 4. Gradual Restraint Release
@@ -299,7 +299,7 @@ def main():
     #                   --- MASTER SETTINGS ---
 
     # Simulation config
-    TARGET_MD_LENGTH =      1               # Simulation length in ns
+    TARGET_MD_LENGTH =      1.0               # Simulation length in ns
     USE_HMR =               True            # Use Hydrogen Mass Repartitioning for longer timesteps
     
     # File config
@@ -307,7 +307,7 @@ def main():
     output_nc =             'production.nc' # Output trajectory file
 
     # Equilibration config (ultra fast and light)
-    em_tolerance =          2.5             # kJ/mol/nm
+    em_tolerance =          10.0            # kJ/mol/nm
     nvt_time =              0.1             # ns
     npt_time =              0.1             # ns
     pre_production_time =   0.1             # ns
@@ -325,7 +325,7 @@ def main():
     # Environment config
     temperature =           300             # K
     pressure =              1.0             # bar
-    box_padding =           1.5             # nm
+    box_padding =           1.0             # nm
     box_type =              'dodecahedron'  # Box shape
     ionic_strength =        0.15            # M
     env_pH =                7.0             # pH
