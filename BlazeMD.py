@@ -325,7 +325,7 @@ def main():
     # Environment config
     temperature =           300             # K
     pressure =              1.0             # bar
-    box_padding =           0.8             # nm
+    box_padding =           1.0             # nm
     box_type =              'dodecahedron'  # Box shape
     ionic_strength =        0.15            # M
     env_pH =                7.0             # pH
