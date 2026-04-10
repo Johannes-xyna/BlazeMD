@@ -59,7 +59,7 @@ python BlazeMD.py your_structure.pdb
 
 ### Quick test
 ```bash
-python BlazeMD.py ./test/cyclotide_miniprotein.pdb
+python BlazeMD.py ./test/dialanine_structure.pdb
 ```
 
 ### How does it work?
