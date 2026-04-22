@@ -91,7 +91,7 @@ nvt_time =              0.5             # ns                                (2.5
 npt_time =              0.5             # ns                                (2.5 ns)
 pre_production_time =   0.5             # ns                                (3   ns)
 report_interval =       10              # ps - Time interval per frame
-restrain_release_time = 200             # ps per restraint release stage    (250 ns)
+restrain_release_time = 100             # ps per restraint release stage    (250 ns)
 
 # HMR config
 hydrogen_mass =         3.0             # amu scaling factor, for HMR
